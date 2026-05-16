@@ -41,11 +41,16 @@ export function install(tools) {
   }
 
   const installed = results.filter(r => r.success).map(r => r.tool)
-  writeFileSync(LOCKFILE, JSON.stringify({
-    version: pkgVersion(),
-    installedAt: new Date().toISOString(),
-    tools: installed,
-  }, null, 2))
+  try {
+    writeFileSync(LOCKFILE, JSON.stringify({
+      version: pkgVersion(),
+      installedAt: new Date().toISOString(),
+      tools: installed,
+    }, null, 2))
+  } catch (err) {
+    console.error(`Failed to write lockfile: ${err.message}`)
+    throw err
+  }
 
   return results
 }
@@ -60,7 +65,7 @@ function appendClaudeRules() {
     if (existing.includes(FENCE)) return
     writeFileSync(claudeMdPath, `${existing}\n\n${FENCE}\n${rules}\n${FENCE}\n`)
   } else {
-    writeFileSync(claudeMdPath, `${FENCE}\n${rules}\n${FENCE}\n`)
+    writeFileSync(claudeMdPath, `\n\n${FENCE}\n${rules}\n${FENCE}\n`)
   }
 }
 

@@ -39,7 +39,7 @@ The installer detects which AI tools you have installed (`~/.claude`, `~/.cursor
 | Tool | Skills | Agents | Global rules |
 |---|---|---|---|
 | Claude Code | ✓ | ✓ | ✓ (CLAUDE.md) |
-| Cursor | — | — | ✓ (.cursorrules) |
+| Cursor | — | — | — |
 | Codex | ✓ | ✓ | ✓ (AGENTS.md) |
 | Gemini CLI | ✓ | ✓ | ✓ (AGENTS.md) |
 

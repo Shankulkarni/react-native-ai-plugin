@@ -48,5 +48,5 @@ function removeClaudeRulesBlock() {
   if (start === -1 || end === -1 || start === end) return
 
   const cleaned = content.slice(0, start) + content.slice(end + FENCE.length + 1)
-  writeFileSync(claudeMdPath, cleaned)
+  writeFileSync(claudeMdPath, cleaned.replace(/^\n+/, ''))
 }

@@ -5,11 +5,12 @@ import { TOOLS } from './detect.js'
 import { LOCKFILE } from './install.js'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
-const PKG_VERSION = JSON.parse(
-  readFileSync(join(__dirname, '..', 'package.json'), 'utf8')
-).version
 
 export function status() {
+  const PKG_VERSION = JSON.parse(
+    readFileSync(join(__dirname, '..', 'package.json'), 'utf8')
+  ).version
+
   if (!existsSync(LOCKFILE)) {
     console.log('rn-ai is not installed. Run: rn-ai install')
     return
