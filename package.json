@@ -1,0 +1,30 @@
+{
+  "name": "react-native-ai-plugin",
+  "version": "0.1.0",
+  "description": "AI-guided development for React Native apps with Expo. Works with Claude Code, Cursor, Gemini CLI, and Codex.",
+  "type": "module",
+  "bin": {
+    "rn-ai": "./cli.js"
+  },
+  "files": [
+    "cli.js",
+    "plugins/",
+    "manifests/",
+    "src/"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "react-native",
+    "expo",
+    "ai",
+    "claude",
+    "cursor",
+    "gemini",
+    "codex",
+    "plugin"
+  ],
+  "author": "Utilities Studio",
+  "license": "MIT"
+}
