@@ -1,4 +1,4 @@
-# RN-Claude -- Global Rules
+# React Native AI Plugin -- Global Rules
 
 These rules apply to every React Native app in this ecosystem.
 

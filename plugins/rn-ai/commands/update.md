@@ -1,6 +1,6 @@
 ---
 name: update
-description: Update the rn-claude plugin to the latest version
+description: Update the rn-ai plugin to the latest version
 ---
 
 # /rn-update
@@ -21,5 +21,5 @@ Pulls the latest version of this plugin.
 ## Steps
 
 ```bash
-bash .claude/plugins/rn-claude/scripts/update.sh
+bash .claude/plugins/rn-ai/scripts/update.sh
 ```

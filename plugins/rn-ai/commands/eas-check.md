@@ -28,7 +28,7 @@ Validates your EAS setup before running a build or submit.
 ## Steps
 
 ```bash
-bash .claude/plugins/rn-claude/scripts/eas-check.sh
+bash .claude/plugins/rn-ai/scripts/eas-check.sh
 ```
 
 ## Output

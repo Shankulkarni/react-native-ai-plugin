@@ -1,6 +1,6 @@
 ---
 name: setup
-description: Install the rn-claude plugin into a React Native app project
+description: Install the rn-ai plugin into a React Native app project
 ---
 
 # /rn-setup
@@ -30,7 +30,7 @@ Run from the root of your Expo app project.
 Run the setup script:
 
 ```bash
-bash .claude/plugins/rn-claude/scripts/setup.sh
+bash .claude/plugins/rn-ai/scripts/setup.sh
 ```
 
 The script will output a checklist of what passed and what needs manual attention.

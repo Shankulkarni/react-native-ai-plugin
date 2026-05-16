@@ -5,7 +5,7 @@ description: Scan the codebase for legacy patterns, New Architecture violations,
 
 # /rn-deslop
 
-Scans `src/` and `app/` for patterns that violate New Architecture rules or rn-claude conventions.
+Scans `src/` and `app/` for patterns that violate New Architecture rules or rn-ai conventions.
 
 ## Usage
 
@@ -39,7 +39,7 @@ Scans `src/` and `app/` for patterns that violate New Architecture rules or rn-c
 ## Steps
 
 ```bash
-bash .claude/plugins/rn-claude/scripts/deslop.sh
+bash .claude/plugins/rn-ai/scripts/deslop.sh
 ```
 
 ## Output

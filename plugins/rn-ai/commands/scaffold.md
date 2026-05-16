@@ -1,6 +1,6 @@
 ---
 name: scaffold
-description: Scaffold a new Expo app with the full rn-claude stack
+description: Scaffold a new Expo app with the full rn-ai stack
 ---
 
 # /rn-scaffold
