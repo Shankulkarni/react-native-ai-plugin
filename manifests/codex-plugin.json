@@ -1,0 +1,15 @@
+{
+  "name": "rn-ai",
+  "description": "React Native AI Plugin — AI-guided development for React Native apps with Expo",
+  "version": "1.0.0",
+  "skills": "./skills/",
+  "agents": [
+    "./agents/orchestrator.md",
+    "./agents/app-architect.md",
+    "./agents/screen-developer.md",
+    "./agents/navigation-architect.md",
+    "./agents/backend-integrator.md",
+    "./agents/eas-engineer.md",
+    "./agents/code-reviewer.md"
+  ]
+}

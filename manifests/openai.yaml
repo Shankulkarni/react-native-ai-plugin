@@ -1,0 +1,22 @@
+agents:
+  - name: orchestrator
+    display_name: RN Orchestrator
+    short_description: Coordinates React Native feature development end-to-end
+  - name: app-architect
+    display_name: App Architect
+    short_description: Designs app structure, navigation, and data flow
+  - name: screen-developer
+    display_name: Screen Developer
+    short_description: Implements screens, components, and UI interactions
+  - name: navigation-architect
+    display_name: Navigation Architect
+    short_description: Designs and implements Expo Router navigation
+  - name: backend-integrator
+    display_name: Backend Integrator
+    short_description: Integrates APIs, React Query hooks, and data layers
+  - name: eas-engineer
+    display_name: EAS Engineer
+    short_description: Manages EAS builds, submissions, and OTA updates
+  - name: code-reviewer
+    display_name: Code Reviewer
+    short_description: Reviews code for RN best practices and anti-patterns
