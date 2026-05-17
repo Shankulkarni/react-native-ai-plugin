@@ -1,6 +1,6 @@
 {
   "name": "react-native-ai-plugin",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "AI-guided development for React Native apps with Expo. Works with Claude Code, Cursor, Gemini CLI, and Codex.",
   "type": "module",
   "bin": {
@@ -26,5 +26,13 @@
     "plugin"
   ],
   "author": "Utilities Studio",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Shankulkarni/react-native-ai-plugin"
+  },
+  "homepage": "https://github.com/Shankulkarni/react-native-ai-plugin#readme",
+  "bugs": {
+    "url": "https://github.com/Shankulkarni/react-native-ai-plugin/issues"
+  }
 }
