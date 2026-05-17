@@ -1,6 +1,6 @@
 {
   "name": "react-native-ai-plugin",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "AI-guided development for React Native apps with Expo. Works with Claude Code, Cursor, Gemini CLI, and Codex.",
   "type": "module",
   "bin": {

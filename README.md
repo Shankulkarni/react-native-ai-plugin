@@ -16,41 +16,70 @@
   <a href="https://docs.swmansion.com/react-native-reanimated"><img src="https://img.shields.io/badge/Reanimated_v3-6B52AE?style=flat-square&logo=react&logoColor=white" alt="Reanimated v3"></a>
   <a href="https://docs.swmansion.com/react-native-gesture-handler"><img src="https://img.shields.io/badge/Gesture_Handler_v2-6B52AE?style=flat-square&logo=react&logoColor=white" alt="Gesture Handler v2"></a>
   <a href="https://bun.sh"><img src="https://img.shields.io/badge/Bun-000000?style=flat-square&logo=bun&logoColor=white" alt="Bun"></a>
-  <a href="https://jestjs.io"><img src="https://img.shields.io/badge/Jest-C21325?style=flat-square&logo=jest&logoColor=white" alt="Jest"></a>
   <a href="LICENSE"><img src="https://img.shields.io/npm/l/react-native-ai-plugin?style=flat-square" alt="MIT"></a>
 </p>
 
 ---
 
-## Install
+## What this does
+
+Installs React Native skills, agents, and hard rules into your AI coding tool. Once installed, your AI assistant knows the right stack (Expo Router, React Query, NativeWind, Reanimated v3) and refuses legacy patterns — on every project, without repeating yourself.
+
+---
+
+## Setup (one-time)
+
+**Step 1 — Install the plugin**
 
 ```bash
-# One-time, no install needed
 npx react-native-ai-plugin install
-
-# Or globally
-npm install -g react-native-ai-plugin
-rn-ai install
 ```
 
-Checks `~/.claude`, `~/.cursor`, `~/.codex`, and `~/.gemini` — installs into whichever tools you have.
+This scans for `~/.claude`, `~/.cursor`, `~/.codex`, `~/.gemini` and installs into whichever tools you have. You'll see a checkmark for each one that succeeded.
+
+> **Note:** If you want the `rn-ai` command available globally (for `rn-ai update`, `rn-ai status`, `rn-ai uninstall`), install it globally instead:
+> ```bash
+> npm install -g react-native-ai-plugin
+> rn-ai install
+> ```
+> The `npx` approach above is enough for a one-time install.
+
+**Step 2 — Scaffold a new app**
+
+Open Claude Code in an empty directory and say:
+
+```
+Scaffold a new Expo app
+```
+
+Claude will ask for your app name, bundle ID, auth type, and tab structure — then generate the full project: dependencies, config files, folder structure, EAS setup, and linting.
+
+That's it. The plugin runs silently from here. Every time you start a task, Claude loads the relevant skill automatically.
 
 ---
 
-## Why this plugin exists
+## Using skills in Claude Code
 
-AI tools don't ship with React Native opinions. Left to their own devices, they'll fetch data in `useEffect`, navigate with string paths, and reach for the wrong animation API.
+Skills are loaded on demand — only the relevant one enters context, the rest cost zero tokens.
 
-- Using `useEffect` for data fetching. React Query is the right answer — this enforces it.
-- String-based navigation with `router.push('/home')`. Expo Router typed routes block that.
-- Reanimated v2 patterns, Animated API from RN core. The plugin locks to Reanimated v3.
-- `NativeModules` and `requireNativeComponent` on every new project. New Architecture only.
-- Setting these rules once per tool, then forgetting them next project. One install covers all tools, all projects.
-- `npm` and `npx` everywhere. `bun` and `bunx` always.
+Ask Claude naturally and it will pick the right skill:
+
+| What you say | Skill loaded |
+|---|---|
+| "Scaffold a new Expo app" | `scaffold` |
+| "Add a login screen with email/password" | `auth` |
+| "Set up navigation with tabs and a stack" | `navigation` |
+| "Build a form with validation" | `forms` |
+| "Add a swipe gesture to dismiss" | `animations` |
+| "Wire up the API to this screen" | `data` |
+| "Set up EAS Build for TestFlight" | `eas` |
+| "Store the user token securely" | `storage` |
+| "Write tests for this component" | `testing` |
+| "Scan this code for bad patterns" | `deslop` |
 
 ---
 
-## ⚡ Commands
+## Commands
 
 | Command | What it does |
 |---|---|
@@ -59,15 +88,17 @@ AI tools don't ship with React Native opinions. Left to their own devices, they'
 | `rn-ai status` | Show which tools have the plugin active |
 | `rn-ai uninstall` | Remove the plugin from all tools |
 
+> These require a global install (`npm install -g react-native-ai-plugin`). The `npx` one-liner only runs install — it doesn't persist the `rn-ai` binary.
+
 ---
 
-## 🧠 Skills
+## Skills
 
 14 skills loaded on demand. Only the relevant skill enters context — the rest cost 0 tokens.
 
 | | Skill | What it covers |
 |---|---|---|
-| 🏗️ | `scaffold` | New library or project setup end-to-end |
+| 🏗️ | `scaffold` | New app setup end-to-end |
 | 🗺️ | `navigation` | Expo Router routes, layouts, typed paths, deep links |
 | 🎨 | `ui` | NativeWind v4, `className` props, shadcn-style components |
 | 📡 | `data` | React Query hooks, API modules, Zod schemas |
@@ -84,7 +115,7 @@ AI tools don't ship with React Native opinions. Left to their own devices, they'
 
 ---
 
-## 🤖 Agents
+## Agents
 
 **7 specialists. Work solo or as a coordinated team.**
 
@@ -117,7 +148,7 @@ AI tools don't ship with React Native opinions. Left to their own devices, they'
 
 ---
 
-## 🔌 Supported Tools
+## Supported Tools
 
 | Tool | Skills | Agents | Hard rules | Config location |
 |---|---|---|---|---|
@@ -128,7 +159,9 @@ AI tools don't ship with React Native opinions. Left to their own devices, they'
 
 ---
 
-## 🛡️ Hard Rules
+## Hard Rules
+
+The plugin enforces these on every project, without you having to say them:
 
 ```
   ┌─────────────────────────────────────────────┐
